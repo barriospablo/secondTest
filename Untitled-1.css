@@ -1,8 +1,32 @@
-.row {
-  display: flex;
-  flex-direction: row;
-}
 .column {
-  display: flex;
-  flex-direction: column;
+  /*este es el valor por defecto que toma la pagina*/
+  width: 25%;
+  float: left; /* el float left o right sirve para alinear los elementos a la izquierda o a la derecha*/
+  background-color: yellowgreen;
 }
+
+@media screen and (max-width: 720px) {
+  /* esto es lo que va a hacer hasta un max de 720 */
+  .column {
+    width: 50%;
+    background-color: turquoise;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* esto es lo que va a hacer hasta un max de 480 */
+  .column {
+    background-color: yellow;
+    width: 100%;
+  }
+}
+
+/*fijense que yo puse primero la resolucion mas grande en el media query si ustedes ponen al al reves o sea algo asi
+
+@media screen and (max-width: 480px) {
+  primero este 
+}
+@media screen and (max-width: 780px) {
+  y despues este no les va a tomar  
+}
+en este caso que estoy usando el max-width supongo que con el min-width es lo contrario
+*/
